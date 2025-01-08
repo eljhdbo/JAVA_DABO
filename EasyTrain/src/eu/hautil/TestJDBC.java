@@ -1,4 +1,4 @@
-package fr.esiee;
+package eu.hautil;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

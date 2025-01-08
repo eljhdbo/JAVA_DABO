@@ -1,9 +1,9 @@
-package fr.esiee;
+package eu.hautil;
 
-import fr.esiee.modele.Arret;
-import fr.esiee.modele.Trajet;
-import fr.esiee.modele.User;
-import fr.esiee.modele.Role;
+import eu.hautil.modele.Arret;
+import eu.hautil.modele.Trajet;
+import eu.hautil.modele.Utilisateur;
+import eu.hautil.modele.Role;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -33,12 +33,12 @@ public class Main {
         System.out.println("Heure d'arrivée: " + trajet2.getTempsArrivee());
         System.out.println("-----");
 
-        User utilisateur1 = new User();
+        Utilisateur utilisateur1 = new Utilisateur();
         utilisateur1.setNom("West");
         utilisateur1.setPrenom("Adam");
         utilisateur1.setRole(Role.ADMIN);
 
-        User utilisateur2 = new User(2, "chevaliernoir", "jesuisbatman1966", "Wayne", "Bruce", LocalDate.of(1939, 3, 30), Role.EMPLOYE);
+        Utilisateur utilisateur2 = new Utilisateur(2, "chevaliernoir", "jesuisbatman1966", "Wayne", "Bruce", LocalDate.of(1939, 3, 30), Role.EMPLOYE);
 
         System.out.println("Utilisateur 1:");
         utilisateur1.afficherInfos();

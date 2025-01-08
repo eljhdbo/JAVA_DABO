@@ -1,4 +1,4 @@
-package fr.esiee.modele;
+package eu.hautil.modele;
 
 import java.time.LocalDateTime;
 

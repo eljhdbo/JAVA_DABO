@@ -1,8 +1,8 @@
-package fr.esiee.modele;
+package eu.hautil.modele;
 
 import java.time.LocalDate;
 
-public class User {
+public class Utilisateur {
 
     private int id;
     private String login;
@@ -12,7 +12,7 @@ public class User {
     private LocalDate dateEmbauche;
     private Role role;
 
-    public User() {
+    public Utilisateur() {
         this.id = 1;
         this.login = "capedcrusader";
         this.mdp = "anderson1966";
@@ -22,7 +22,7 @@ public class User {
         this.role = Role.EMPLOYE;
     }
 
-    public User(int id, String login, String mdp, String nom, String prenom, LocalDate dateEmbauche, Role role) {
+    public Utilisateur(int id, String login, String mdp, String nom, String prenom, LocalDate dateEmbauche, Role role) {
         this.id = id;
         this.login = login;
         this.mdp = mdp;
