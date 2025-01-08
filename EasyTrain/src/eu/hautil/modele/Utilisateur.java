@@ -19,7 +19,7 @@ public class Utilisateur {
         this.nom = "West";
         this.prenom = "Adam";
         this.dateEmbauche = LocalDate.now();
-        this.role = Role.EMPLOYE;
+        this.role = Role.employee;
     }
 
     public Utilisateur(int id, String login, String mdp, String nom, String prenom, LocalDate dateEmbauche, Role role) {

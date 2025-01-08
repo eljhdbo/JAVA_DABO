@@ -47,7 +47,7 @@ public class EasyTrainDAO {
                         rs.getString("nom"),
                         rs.getString("prenom"),
                         rs.getDate("dateEmbauche").toLocalDate(),
-                        Role.valueOf(rs.getString("role").toUpperCase())
+                        Role.valueOf(rs.getString("role"))
                 );
             }
         } catch (SQLException e) {
@@ -64,6 +64,8 @@ public class EasyTrainDAO {
 
             ResultSet rs = stmt.executeQuery("SELECT * FROM utilisateur");
             while (rs.next()) {
+                String roleStr = rs.getString("role").toLowerCase();
+                Role role = Role.valueOf(roleStr);
                 utilisateurs.add(new Utilisateur(
                         rs.getInt("id"),
                         rs.getString("login"),
@@ -71,7 +73,7 @@ public class EasyTrainDAO {
                         rs.getString("nom"),
                         rs.getString("prenom"),
                         rs.getDate("dateEmbauche").toLocalDate(),
-                        Role.valueOf(rs.getString("role").toUpperCase())
+                        role
                 ));
             }
         } catch (SQLException e) {
@@ -91,7 +93,7 @@ public class EasyTrainDAO {
             stmt.setString(3, u.getNom());
             stmt.setString(4, u.getPrenom());
             stmt.setDate(5, Date.valueOf(u.getDateEmbauche()));
-            stmt.setString(6, u.getRole().toString().toLowerCase());
+            stmt.setString(6, u.getRole().toString());
 
             int affectedRows = stmt.executeUpdate();
             if (affectedRows > 0) {

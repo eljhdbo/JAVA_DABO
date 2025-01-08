@@ -38,7 +38,7 @@ public class TestDAO {
                 "Kent",
                 "Clark",
                 LocalDate.now(),
-                Role.EMPLOYE
+                Role.employee
         );
 
         if (dao.ajouterUtilisateur(newUser)) {

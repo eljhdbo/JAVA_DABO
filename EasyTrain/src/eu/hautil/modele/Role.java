@@ -1,5 +1,6 @@
 package eu.hautil.modele;
 
 public enum Role {
-    ADMIN, EMPLOYE
+    admin,
+    employee
 }

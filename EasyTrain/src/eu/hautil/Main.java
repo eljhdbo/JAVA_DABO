@@ -36,9 +36,9 @@ public class Main {
         Utilisateur utilisateur1 = new Utilisateur();
         utilisateur1.setNom("West");
         utilisateur1.setPrenom("Adam");
-        utilisateur1.setRole(Role.ADMIN);
+        utilisateur1.setRole(Role.admin);
 
-        Utilisateur utilisateur2 = new Utilisateur(2, "chevaliernoir", "jesuisbatman1966", "Wayne", "Bruce", LocalDate.of(1939, 3, 30), Role.EMPLOYE);
+        Utilisateur utilisateur2 = new Utilisateur(2, "chevaliernoir", "jesuisbatman1966", "Wayne", "Bruce", LocalDate.of(1939, 3, 30), Role.employee);
 
         System.out.println("Utilisateur 1:");
         utilisateur1.afficherInfos();
