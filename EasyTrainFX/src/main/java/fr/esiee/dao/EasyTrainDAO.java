@@ -4,7 +4,7 @@ import fr.esiee.modele.Arret;
 import fr.esiee.modele.Role;
 import fr.esiee.modele.Trajet;
 import fr.esiee.modele.Utilisateur;
-import fr.esiee.modele.TypeArret;
+import fr.esiee.modele.;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -107,7 +107,7 @@ public class EasyTrainDAO {
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 Arret arret = new Arret(rs.getInt("id"), rs.getString("nom"));
-                arret.setType(TypeArret.valueOf(rs.getString("type_arret")));
+                arret.setType(.valueOf(rs.getString("type_arret")));
                 return arret;
             }
         } catch (SQLException e) {
@@ -135,7 +135,7 @@ public class EasyTrainDAO {
             ResultSet rs = stmt.executeQuery("SELECT * FROM arret");
             while (rs.next()) {
                 Arret arret = new Arret(rs.getInt("id"), rs.getString("nom"));
-                arret.setType(TypeArret.valueOf(rs.getString("type_arret")));
+                arret.setType(valueOf(rs.getString("type_arret")));
                 arrets.add(arret);
             }
         } catch (SQLException e) {

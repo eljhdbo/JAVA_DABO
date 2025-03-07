@@ -1,7 +1,6 @@
 package fr.esiee.dao;
 
 import fr.esiee.modele.Arret;
-import fr.esiee.modele.TypeArret;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,7 +10,6 @@ public class TestArretDAO {
     @Test
     public void testAjoutArret() {
         Arret arret = new Arret(0, "Gare Test");
-        arret.setType(TypeArret.TERMINUS);
 
         assertTrue(dao.ajouterArret(arret));
         assertTrue(arret.getId() > 0);
@@ -28,7 +26,6 @@ public class TestArretDAO {
         assertFalse(dao.nomArretExiste(nomTest));
 
         Arret arret = new Arret(0, nomTest);
-        arret.setType(TypeArret.INTERMEDIAIRE);
         dao.ajouterArret(arret);
 
         assertTrue(dao.nomArretExiste(nomTest));

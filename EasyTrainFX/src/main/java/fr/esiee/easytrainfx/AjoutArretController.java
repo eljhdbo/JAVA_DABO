@@ -2,14 +2,14 @@ package fr.esiee.easytrainfx;
 
 import fr.esiee.dao.EasyTrainDAO;
 import fr.esiee.modele.Arret;
-import fr.esiee.modele.TypeArret;
+import fr.esiee.modele.;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 
 public class AjoutArretController {
     @FXML private TextField nomField;
-    @FXML private ComboBox<TypeArret> typeArretComboBox;
+    @FXML private ComboBox<> typeArretComboBox;
     @FXML private Label messageLabel;
 
     private EasyTrainDAO dao;
@@ -17,7 +17,7 @@ public class AjoutArretController {
     @FXML
     public void initialize() {
         dao = new EasyTrainDAO();
-        typeArretComboBox.getItems().addAll(TypeArret.values());
+        typeArretComboBox.getItems().addAll(.values());
         messageLabel.setWrapText(true);
     }
 
